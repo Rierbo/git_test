@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="zut.exam.mapper.EmployeeMapper">
+	<select id="getAllEmployee" resultMap="EmployeeList">
+		select * from employee
+	</select>
+	<resultMap type="Employee" id="EmployeeList">
+		<id property="id" column="id"></id>
+		<result property="name" column="name"></result>
+		<result property="sex" column="sex"></result>
+		<result property="age" column="age"></result>
+		<result property="department" column="department"></result>
+		<result property="type" column="type"></result>
+		<result property="year" column="year"></result>
+	</resultMap>
+</mapper>
